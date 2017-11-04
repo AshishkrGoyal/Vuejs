@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vuejs</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+
+<div id="app">
+    <input type="text" v-on:input="changeText">
+    <p>{{title}}</p>
+</div>
+
+</body>
+
+<script>
+    new Vue({
+        el: "#app",
+        data : {
+            title: "Hello Vue!!"
+        },
+        methods: {
+            changeText : function (event) {
+                this.title = event.target.value
+            }
+
+        }
+    })
+</script>
+</html>
