@@ -8,11 +8,18 @@
 </head>
 <body>
 
-<div id="app">
+<!-- <div id="app">
     <input type="text" v-on:input="changeText">
     <p>{{title}}</p>
 </div>
-
+-->
+<div id="app">
+  <input type="text" v-model="title">
+  <p>{{ title }}</p>
+</div>
+    
+<!-- A better way is to use v-model directive which helps in two-way data-binding -->
+    
 </body>
 
 <script>
@@ -20,13 +27,13 @@
         el: "#app",
         data : {
             title: "Hello Vue!!"
-        },
-        methods: {
+        }
+        /*methods: {
             changeText : function (event) {
                 this.title = event.target.value
             }
 
-        }
+        } */
     })
 </script>
 </html>
